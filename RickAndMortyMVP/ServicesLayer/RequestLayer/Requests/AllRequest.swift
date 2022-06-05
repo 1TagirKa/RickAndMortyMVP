@@ -16,3 +16,10 @@ struct AllCharactersRequest: IRequest {
     var  headers: HTTPHeaders? = nil
 }
 
+struct CharactersOnPageRequest: IRequest {
+    var path: String = "/character/?page=2"
+    var method: HTTPMethod = .get
+    var parameters: [String : Any]? = nil
+    var headers: HTTPHeaders? = nil
+}
+

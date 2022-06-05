@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, MainViewProtocol {
+class MainViewController: UIViewController, IMainView {
     
     //MARK: - IBOutlets
     @IBOutlet weak var actionLabel: UILabel!
@@ -30,13 +30,7 @@ class MainViewController: UIViewController, MainViewProtocol {
     }
     
     @IBAction func transactionButtonPressed(_ sender: Any) {
-        NetworkManager.shared.fetchAllCharactersNumber { result in
-            switch result {
-            case .success(let charactersNumber):
-                print(charactersNumber)
-            case .failure(let error):
-                print(error)
-            }
-        }
+        let appInfoVC = ModuleBuilder.createAppInfoModule()
+        present(appInfoVC, animated: true)
     }
 }

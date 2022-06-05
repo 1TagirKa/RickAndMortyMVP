@@ -7,19 +7,19 @@
 
 import Foundation
 
-protocol MainViewProtocol {
+protocol IMainView {
     func transactionButtonPressed(_ sender: Any)
 }
 
 protocol MainPresenterProtocol{
-    init(view: MainViewProtocol)
+    init(view: IMainView)
 }
 
 class MainPresenter: MainPresenterProtocol {
     
-    let view: MainViewProtocol
+    let view: IMainView
     
-    required init(view: MainViewProtocol) {
+    required init(view: IMainView) {
         self.view = view
     }
 }
