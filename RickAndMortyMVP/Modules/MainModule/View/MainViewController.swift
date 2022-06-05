@@ -30,5 +30,13 @@ class MainViewController: UIViewController, MainViewProtocol {
     }
     
     @IBAction func transactionButtonPressed(_ sender: Any) {
+        NetworkManager.shared.fetchAllCharactersNumber { result in
+            switch result {
+            case .success(let charactersNumber):
+                print(charactersNumber)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
