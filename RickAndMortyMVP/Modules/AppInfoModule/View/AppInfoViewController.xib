@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="get_schwifty.ttf">
+            <string>GetSchwifty-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppInfoViewController" customModule="RickAndMortyMVP" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rickAndMortyInfo" translatesAutoresizingMaskIntoConstraints="NO" id="Egs-6t-aGY">
+                    <rect key="frame" x="20" y="257.5" width="374" height="391"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtL-fW-js8">
+                    <rect key="frame" x="16" y="796" width="378" height="46"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Let's go">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                    </buttonConfiguration>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here You Can Find" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgl-xb-SuR">
+                    <rect key="frame" x="20" y="144.5" width="374" height="97"/>
+                    <fontDescription key="fontDescription" name="GetSchwifty-Regular" family="Get Schwifty" pointSize="44"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvZ-XV-eeI">
+                    <rect key="frame" x="20" y="665" width="374" height="0.0"/>
+                    <fontDescription key="fontDescription" name="GetSchwifty-Regular" family="Get Schwifty" pointSize="44"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BvZ-XV-eeI" secondAttribute="trailing" constant="20" id="7oh-ht-5gi"/>
+                <constraint firstItem="Egs-6t-aGY" firstAttribute="top" secondItem="Hgl-xb-SuR" secondAttribute="bottom" constant="16" id="Al5-Fr-3gQ"/>
+                <constraint firstItem="Hgl-xb-SuR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="CGF-qr-fBW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xtL-fW-js8" secondAttribute="trailing" constant="20" id="Jdv-68-Ckd"/>
+                <constraint firstItem="xtL-fW-js8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="LQb-Hj-nXK"/>
+                <constraint firstItem="Egs-6t-aGY" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.436384" id="NNe-Hb-QSB"/>
+                <constraint firstAttribute="trailing" secondItem="Egs-6t-aGY" secondAttribute="trailing" constant="20" id="ODF-lE-bfZ"/>
+                <constraint firstItem="Hgl-xb-SuR" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.108259" id="SXV-d0-1CA"/>
+                <constraint firstItem="xtL-fW-js8" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0513393" id="Uen-CL-ImO"/>
+                <constraint firstItem="Egs-6t-aGY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="XUA-69-MUX"/>
+                <constraint firstItem="BvZ-XV-eeI" firstAttribute="top" secondItem="Egs-6t-aGY" secondAttribute="bottom" constant="16.5" id="ZvT-CV-vc2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hgl-xb-SuR" secondAttribute="trailing" constant="20" id="dGI-Th-9P4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xtL-fW-js8" secondAttribute="bottom" constant="20" id="h3b-tO-Q0q"/>
+                <constraint firstItem="Egs-6t-aGY" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="m4X-Ry-CdQ"/>
+                <constraint firstItem="BvZ-XV-eeI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="x9x-xM-fWR"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="rickAndMortyInfo" width="900" height="881"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
