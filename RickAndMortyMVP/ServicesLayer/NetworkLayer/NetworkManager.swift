@@ -12,6 +12,7 @@ struct NetworkManager: INetworkManager {
     //MARK: - singletone Shared
     static let shared = NetworkManager()
     
+    //MARK: - typealias
     typealias allCharacterHandler = (Result<Int, Error>) -> Void
     
     //MARK: - fetchAllCharacters
@@ -22,6 +23,19 @@ struct NetworkManager: INetworkManager {
             switch result {
             case .success(let response):
                 completionHandler(.success(response.info.count))
+            case .failure(let error):
+                completionHandler(.failure(error))
+            }
+        }
+    }
+    
+    func fetchCharactersOnPage(_ pageNumber: Int, completionHandler: @escaping (Result<[MovieCharacter]?, Error>) -> Void) {
+        let characterOnPageConfig = RequestFactory.CharacterRequest.charactersOnPage(pageNumber)
+        
+        RequestSender.shared.send(requestConfig: characterOnPageConfig) { result in
+            switch result {
+            case .success(let response):
+                completionHandler(.success(response.results))
             case .failure(let error):
                 completionHandler(.failure(error))
             }

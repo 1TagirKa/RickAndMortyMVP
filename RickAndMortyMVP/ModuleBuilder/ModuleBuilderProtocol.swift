@@ -10,4 +10,5 @@ import UIKit
  
 protocol ModuleBuilderProtocol {
     static func createMainModule() -> UIViewController
+    static func createAppInfoModule() -> UIViewController
 }

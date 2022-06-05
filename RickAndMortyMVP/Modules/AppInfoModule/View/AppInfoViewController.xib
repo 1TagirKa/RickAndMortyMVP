@@ -15,6 +15,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppInfoViewController" customModule="RickAndMortyMVP" customModuleProvider="target">
             <connections>
+                <outlet property="countLabel" destination="BvZ-XV-eeI" id="vQk-1Q-Uyv"/>
+                <outlet property="letsGoButton" destination="xtL-fW-js8" id="mMS-pg-KTb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,6 +36,9 @@
                     <buttonConfiguration key="configuration" style="plain" title="Let's go">
                         <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="letsGoButtonPressed:" destination="-1" eventType="touchUpInside" id="4QG-9H-eR4"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here You Can Find" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgl-xb-SuR">
                     <rect key="frame" x="20" y="144.5" width="374" height="97"/>
